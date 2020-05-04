@@ -1,5 +1,6 @@
 ﻿using System;
 using XadrezConsole.Board;
+using XadrezConsole.Xadrez;
 
 namespace XadrezConsole
 {
@@ -19,12 +20,20 @@ namespace XadrezConsole
                     else
                     {
                         Tela.ImprimirPeca(tab.Peca(i, j));
-                        Console.Write("");
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("  a b c d e f g h");
+        }
+
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
 
         public static void ImprimirPeca(Peca peca)

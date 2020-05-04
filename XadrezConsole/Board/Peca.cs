@@ -13,5 +13,10 @@
             Tabuleiro = tabuleiro;
             QtdeMovimentos = 0;
         }
+
+        public void AddMovimento()
+        {
+            QtdeMovimentos++;
+        }
     }
 }
