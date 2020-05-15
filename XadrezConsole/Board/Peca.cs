@@ -1,4 +1,6 @@
-﻿namespace XadrezConsole.Board
+﻿using System;
+
+namespace XadrezConsole.Board
 {
     abstract class Peca
     {
@@ -41,5 +43,10 @@
         }
 
         public abstract bool[,] MovimentosPossiveis();
+
+        internal void SubtractMovimento()
+        {
+            QtdeMovimentos--;
+        }
     }
 }
